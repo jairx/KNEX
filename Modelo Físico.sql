@@ -1,9 +1,9 @@
 -- Gera��o de Modelo f�sico
 -- Sql ANSI 2003 - brModelo.
 
-CREATE DATABASE knex;
+CREATE DATABASE jairneto_knex;
 
-USE knex;
+USE jairneto_knex;
 
 CREATE TABLE USUARIO (
 ID_USUARIO int(5) PRIMARY KEY auto_increment,
