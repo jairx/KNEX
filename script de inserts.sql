@@ -1,4 +1,4 @@
-abcinsert into AREA (AREA)
+insert into AREA (AREA)
 VALUES ('Matemática'), 
 ('Português'),
 ('Física'),
