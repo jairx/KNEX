@@ -85,11 +85,11 @@ values ('jairx', 'otaku', 'Jair Ferreira', '70020080021', 'jair_lindao@gmail.com
         ('sohvamo', 'jairjafui', 'Sulivan Alves Soares', '68443166878', 'melivan@hotmail.com');
 
 insert into QUESTAO (PERGUNTA, RESPOSTA_CERTA, RESPOSTA2, RESPOSTA3, RESPOSTA4, RESPOSTA5, ID_USUARIO, ID_ASSUNTO)
-values ('Quem descobriu o Brasil?', 'Colombo', 'Vasco da Gama', 'Bartolomeu', 'Anhanguera', 'Cabral', 7, 22), 
-        ('Como foi chamada a arte do período da Idade das Trevas?', 'Gótica', 'Renascentista', 'Cubista', 'Surrealista', 'Barroca', 5, 25), 
+values ('Quem descobriu o Brasil?', 'Cabral', 'Vasco da Gama', 'Bartolomeu', 'Anhanguera', 'Colombo', 7, 22),
+        ('Como foi chamada a arte do período da Idade das Trevas?', 'Renascentista', 'Gótica', 'Cubista', 'Surrealista', 'Barroca', 5, 25), 
         ('Como se chama um triangulo com dois lados de tamanho igual?', 'Isosceles', 'Escaleno', 'Equilatero', 'Igualitário', 'Estatico', 5, 1), 
-        ('Valor do seno de 45° é?', '30', '1/2', '1/sqrt(2)', '1', '1/sqrt(3)', 5, 1), 
+        ('Valor do seno de 45° é?', '1/sqrt(2)', '1/2', '30', '1', '1/sqrt(3)', 5, 1), 
         ('Em relação aos lados do triangulo, como calcular o valor de tangente?', 'cateto oposto/cateto adjacente', 'cateto oposto/hipotenusa', 'cateto adjacente/hipotenusa', 'cateto adjacente/cateto oposto', 'hipotenusa/cateto oposto', 5, 1), 
-        ('Qual o valor do cosseno de 90°?', '1', '0', '90', '1/sqrt(2)', '1/sqrt(3)', 7, 1), 
-        ('Qual o capital aplicado para render um montante de R$8000,00 reais depois de 12 meses de aplicação a uma taxa de 2% ao mês?', '7258,23', '7214,84', '6277,98', '6307,95', '6421,37', 7, 11), 
-        ('Qual o juros compostos gerado por um investimento de R$3000,00 reais durante 3 meses a uma taxa de 2% ao mês?', '254,27', '183,62', '314,12', '157,29', '194,68', 8, 11);
+        ('Qual o valor do cosseno de 90°?', '0', '1', '90', '1/sqrt(2)', '1/sqrt(3)', 7, 1), 
+        ('Qual o capital aplicado para render um montante de R$8000,00 reais depois de 12 meses de aplicação a uma taxa de 2% ao mês?', '6307,94', '7214,84', '6277,98', '7258,23', '6421,37', 7, 11), 
+        ('Qual o juros compostos gerado por um investimento de R$3000,00 reais durante 3 meses a uma taxa de 2% ao mês?', '183,62', '254,27', '314,12', '157,29', '194,68', 8, 11);

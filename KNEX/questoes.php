@@ -21,11 +21,17 @@ $result = $query->selectQuestao($idAssunto);
     <br>
     <br>
     <br>
-    <h2><?= $area ?> - <?= $assunto ?></h2>
+        <h2><?= $area ?> - <?= $assunto ?></h2>
     <br>
     <br>
     <br>
     <br>
+
+        <div class="row">
+            <button type="submit" formaction="novaQuestao.php?area=<?= $area ?>&idAssunto=<?= $idAssunto ?>&assunto=<?= $assunto ?>" 
+                class="btn btn-success">Responder</button>
+        </div>
+
     <br>
     <br>
 
@@ -39,35 +45,105 @@ while($questao = $result->fetch()){
     ?>
 
         <div class="container">
-            <form action="" method="POST">
+            <form action="processaQuestao.php" method="POST">
                 <div class="row">
                     <div class="col-6">
-                        <label for="questao">Questão: <?= $questao["QUESTAO"] ?></label>
+                        <label for="questao">Questão: <?= $questao["PERGUNTA"] ?></label>
                     </div>
                 </div>  
 
                 <?php
 
-                    $count = 1;
+                    $count = 0;
 
-                    while($count<=5) {            
+                    $numeroQuestao = array(1, 2, 3, 4, 5);
 
-                ?>
+                    $questaoOrdenada = array_rand($numeroQuestao, 5);
 
-                <div class="col-8">
-                    <input type="radio" name="resposta" value="1">
-                    <label for="resposta"><?= $resposta($count) ?></label>
-                </div>
+                    while($count<=4) { 
+                        
+                        switch ($questaoOrdenada[$count]) {
 
-                <?php
+                            case 1:
+
+                                ?>
+
+                                    <div class="col-8">
+                                        <input type="radio" name="resposta" value="1">
+                                        <label for="resposta"><?= $resposta[1] ?></label>
+                                    </div>
+
+                                <?php
+
+                                break;
+
+                            case 2:
+
+                                ?>
+
+                                    <div class="col-8">
+                                        <input type="radio" name="resposta" value="0">
+                                        <label for="resposta"><?= $resposta[2] ?></label>
+                                    </div>
+
+                                <?php
+
+                                break;
+
+                            case 3:
+
+                                ?>
+
+                                    <div class="col-8">
+                                        <input type="radio" name="resposta" value="0">
+                                        <label for="resposta"><?= $resposta[3] ?></label>
+                                    </div>
+
+                                <?php
+
+                                break;
+
+                            case 4:
+
+                                ?>
+
+                                    <div class="col-8">
+                                        <input type="radio" name="resposta" value="0">
+                                        <label for="resposta"><?= $resposta[4] ?></label>
+                                    </div>
+
+                                <?php
+
+                                break;
+
+                            case 5:
+
+                                ?>
+
+                                    <div class="col-8">
+                                        <input type="radio" name="resposta" value="0">
+                                        <label for="resposta"><?= $resposta[5] ?></label>
+                                    </div>
+
+                                <?php
+
+                                break;
+
+                        }
 
                         $count++;
                     }
 
                 ?>
+
+                <input type="hidden" name="idAssunto" value="<?= $idAssunto ?>">
+                <input type="hidden" name="assunto" value="<?= $assunto ?>">
+                <input type="hidden" name="area" value="<?= $area ?>">
+                <input type="hidden" name="idQuestao" value="<?= $questao["ID_QUESTAO"] ?>">
+                <input type="hidden" name="idUsuario" value="<?= $questao["ID_USUARIO"] ?>">
                 
                 <div class="row">
-                    <button type="submit" class="btn btn-success">Cadastrar</button>
+                    <button type="submit" class="btn btn-success">Responder</button>
                 </div>
             </form>
         </div>
@@ -75,6 +151,8 @@ while($questao = $result->fetch()){
         <br>
         <br>
         <br>
+
+        <p>-------------------------------------------------------------------------------------------------------------------</p>
 
     <?php
 
