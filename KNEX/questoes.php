@@ -29,13 +29,15 @@ $result = $query->selectQuestao($idAssunto);
 
         <div class="row">
             <button type="submit" formaction="novaQuestao.php?area=<?= $area ?>&idAssunto=<?= $idAssunto ?>&assunto=<?= $assunto ?>" 
-                class="btn btn-success">Responder</button>
+                class="btn btn-success">Nova Questão</button>
         </div>
 
     <br>
     <br>
 
 <?php
+
+$contador=1;
 
 while($questao = $result->fetch()){
 
@@ -48,7 +50,7 @@ while($questao = $result->fetch()){
             <form action="processaQuestao.php" method="POST">
                 <div class="row">
                     <div class="col-6">
-                        <label for="questao">Questão: <?= $questao["PERGUNTA"] ?></label>
+                        <label for="questao">Questão <?= $contador ?>: <?= $questao["PERGUNTA"] ?></label>
                     </div>
                 </div>  
 
@@ -155,6 +157,8 @@ while($questao = $result->fetch()){
         <p>-------------------------------------------------------------------------------------------------------------------</p>
 
     <?php
+
+    $contador++;
 
 }
 
