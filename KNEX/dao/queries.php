@@ -8,8 +8,8 @@
 
             header("Access-Control-Allow-Origin: *");
             header('Content-Type: text/html; charset=UTF-8');
-            $host = "mysql:host=localhost;dbname=jairneto_knex";
-            $usuario = "jairneto_teamx";
+            $host = "mysql:host=localhost;dbname=knex";
+            $usuario = "jairx";
             $senha = "Copa2018";
         
             try {

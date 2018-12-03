@@ -5,6 +5,10 @@
 	padding: 0;
 }
 
+#area{
+	text-align: center;
+}
+
 .menu, .submenu{
 	list-style: none;
 	float: left;
@@ -77,7 +81,7 @@ div#choosed{
 	position: center;
 }
 
-footer {
+.footer {
 	position: absolute;
 	bottom: 0px;
 	text-align: center;
