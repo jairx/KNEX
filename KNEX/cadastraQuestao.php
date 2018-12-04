@@ -19,6 +19,12 @@ $idAssunto = $_POST["idAssunto"];
 $assunto = $_POST["assunto"];
 $area = $_POST["area"];
 
+$query = new Queries();
+
+$result = $query->insertQuestao($pergunta, $resposta1, $resposta2, $resposta3, $resposta4, $resposta5, $usuario, $idAssunto);
+
+header('Location: novaQuestao.php?success=true');
+
 ?>
 
 <?php

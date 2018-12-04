@@ -8,9 +8,9 @@
 
 <?php
 
-    $area = $_GET["area"];
-    $idAssunto = $_GET["idAssunto"];
-    $assunto = $_GET["assunto"];
+    $area = $_POST["area"];
+    $idAssunto = $_POST["idAssunto"];
+    $assunto = $_POST["assunto"];
 
 ?>
 
@@ -18,6 +18,7 @@
     <br>
     <br>
         <h2><?= $area ?> - <?= $assunto ?></h2>
+    <br>
     <br>
     <br>
     <br>
@@ -56,7 +57,7 @@
                 <input type="textarea" name="resposta5">
             </div>
 
-            <input type="hidden" name="usuario" value="">
+            <input type="hidden" name="usuario" value="2">
             <input type="hidden" name="idAssunto" value="<?= $idAssunto ?>">
             <input type="hidden" name="area" value="<?= $area ?>">
             <input type="hidden" name="assunto" value="<?= $assunto ?>">

@@ -28,8 +28,12 @@ $result = $query->selectQuestao($idAssunto);
     <br>
 
         <div class="row">
-            <button type="submit" formaction="novaQuestao.php?area=<?= $area ?>&idAssunto=<?= $idAssunto ?>&assunto=<?= $assunto ?>" 
-                class="btn btn-success">Nova Questão</button>
+            <form action="novaQuestao.php?area=<?= $area ?>&idAssunto=<?= $idAssunto ?>&assunto=<?= $assunto ?>&idUsuario=2" method="POST">
+                <input type="hidden" name=area value="<?= $area ?>">
+                <input type="hidden" name=idAssunto value="<?= $idAssunto ?>">
+                <input type="hidden" name=assunto value="<?= $assunto ?>">
+                <button type="submit" class="btn btn-success">Nova Questão</button>
+            </form>
         </div>
 
     <br>
@@ -142,7 +146,7 @@ while($questao = $result->fetch()){
                 <input type="hidden" name="assunto" value="<?= $assunto ?>">
                 <input type="hidden" name="area" value="<?= $area ?>">
                 <input type="hidden" name="idQuestao" value="<?= $questao["ID_QUESTAO"] ?>">
-                <input type="hidden" name="idUsuario" value="<?= $questao["ID_USUARIO"] ?>">
+                <input type="hidden" name="idUsuario" value="2">
                 
                 <div class="row">
                     <button type="submit" class="btn btn-success">Responder</button>
