@@ -3,7 +3,7 @@
 
 CREATE DATABASE jairneto_knex;
 
-USE jairneto_knex;tutu
+USE jairneto_knex;
 
 CREATE TABLE USUARIO (
 ID_USUARIO int(5) PRIMARY KEY auto_increment,
